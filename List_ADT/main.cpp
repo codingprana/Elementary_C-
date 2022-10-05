@@ -4,6 +4,7 @@
 
 using namespace std;
 
+
 int main() {
   // Initialize a list
   List list = List();
@@ -25,7 +26,7 @@ int main() {
   cout << "\n\n";
 
   // Insert several items in the middle of the List
-  list.Insert(1, 2);
+  list.Insert(1, 1);
   list.Insert(4, 5);
   list.Insert(5, 8);
 

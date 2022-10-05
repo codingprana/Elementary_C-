@@ -8,12 +8,10 @@
 class List
 {
   private:
-    int m_count;
+    int m_count{0};
     int *m_items;
 
   public:
-    List();
-    ~List();
     int Get(int index);
     void Insert(int index, int val);
     int Search(int val);
@@ -38,7 +36,7 @@ void List::Insert( int index, int value)
     return;
   
   // Copy the current array
-  int *OldArray = m_items;
+  int *oldArray = m_items;
 
   // Increase the array length
   ++m_count;
@@ -52,13 +50,13 @@ void List::Insert( int index, int value)
       m_items[i] = value;
     }
     else {
-      m_items[i] = OldArray[j];
+      m_items[i] = oldArray[j];
       ++j;
     }
   }
 
   // Remove copied array
-  delete [] OldArray;
+  delete [] oldArray;
   
 }
 
