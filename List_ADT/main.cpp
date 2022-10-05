@@ -49,5 +49,36 @@ int main() {
   }
   cout << "\n\n";
 
+
+  list.Insert(7, 71);
+  list.Insert(8, 69);
+  // Print current list
+  cout << "List element:" << endl;
+  for (int i = 0; i < list.Count(); ++i) {
+    cout << list.Get(i) << " ";
+  }
+  cout << "\n\n";
+
+  // Search value 71
+  cout << "Search element " << test_1 << endl;
+  result = list.Search(test_1);
+  if (result == -1) {
+    cout << test_1 << " is not found\n";
+  }
+  else {
+    cout << test_1 << " is found at index " << result;
+  }
+  cout << "\n\n";
+
+  // Remove index 7
+  list.Remove(2);
+  list.Remove(2);
+  // Print current list
+  cout << "List element:" << endl;
+  for (int i = 0; i < list.Count(); ++i) {
+    cout << list.Get(i) << " ";
+  }
+  cout << "\n\n";
+
   return 0;
 }
