@@ -20,9 +20,7 @@ int main() {
 
   // Print current list
   cout << "List element:" << endl;
-  for (int i = 0; i < list.Count(); ++i) {
-    cout << list.Get(i) << " ";
-  }
+  list.PrintList();
   cout << "\n\n";
 
   // Insert several items in the middle of the List
@@ -32,9 +30,7 @@ int main() {
 
   // Print current list
   cout << "List element:" << endl;
-  for (int i = 0; i < list.Count(); ++i) {
-    cout << list.Get(i) << " ";
-  }
+  list.PrintList();
   cout << "\n\n";
 
   // Search value 71
@@ -54,9 +50,7 @@ int main() {
   list.Insert(8, 69);
   // Print current list
   cout << "List element:" << endl;
-  for (int i = 0; i < list.Count(); ++i) {
-    cout << list.Get(i) << " ";
-  }
+  list.PrintList();
   cout << "\n\n";
 
   // Search value 71
@@ -75,9 +69,7 @@ int main() {
   list.Remove(2);
   // Print current list
   cout << "List element:" << endl;
-  for (int i = 0; i < list.Count(); ++i) {
-    cout << list.Get(i) << " ";
-  }
+  list.PrintList();
   cout << "\n\n";
 
   return 0;

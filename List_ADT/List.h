@@ -5,6 +5,7 @@
 
 #include <iostream>
 
+using namespace std;
 
 class List
 {
@@ -13,23 +14,17 @@ class List
     int *m_items;
 
   public:
-    List();
-    ~List();
+    List() 
+      : m_count{0}, m_items{nullptr} {}
+    ~List() { delete[] m_items;}
     int Get(int index);
     void Insert(int index, int val);
     int Search(int val);
     void Remove(int index);
     int Count();
+    void PrintList();
 };
 #endif // LIST_H
-
-List::List() : m_count(0) {
-  m_items = nullptr;
-}
-
-List::~List() {
-  delete[] m_items;
-}
 
 int List::Get(int index)
 {
@@ -65,7 +60,6 @@ void List::Insert( int index, int value)
       ++j;
     }
   }
-
   // Remove copied array
   delete[] oldArray;
   oldArray = nullptr;
@@ -112,3 +106,9 @@ int List::Count() {
   return m_count;
 }
 
+void List::PrintList() {
+  for (int i = 0; i < m_count; ++i) {
+    cout << m_items[i] << " ";
+  }
+  cout << endl;
+}
