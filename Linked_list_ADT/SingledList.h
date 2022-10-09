@@ -44,7 +44,7 @@ class LinkedList {
 template <typename T>
 Node<T> *LinkedList<T>::Get(int index) {
   // check if the index is out of bound
-  if (index < 0 || index > m_count)
+  if (index < 0 || index >= m_count)
     return nullptr;
 
   Node<T> *node = Head;
